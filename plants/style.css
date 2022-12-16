@@ -1,2 +1,56 @@
+@import "./fonts.css";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1440px;
+}
+
+/*Cтили для header*/
+
+header {
+  background-color: rgb(237, 242, 236);
+  font: 400 16px 'Inika', serif;
+  color: rgb(1, 2, 1)
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 1220px;
+  justify-content: space-between;
+  padding: 42px 0;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo img {
+  width: 20px;
+  height: 20px;
+  margin-top: -8px;
+}
+
+.list-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 452px;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 50px;
+}
+
+/*Стили для section "welcome"*/
 
