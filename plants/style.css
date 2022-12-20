@@ -152,3 +152,77 @@ h1 span {
 
 /*Стили для section "service"*/
 
+.service {
+  background-color: rgb(237, 242, 236);
+}
+
+.project {
+  display: flex;
+  width: 1007px;
+  margin-left: 109px;
+  padding: 40px 0 79px;
+}
+
+.project h2 {
+  width: 306px;
+  font: 400 40px 'Inika', serif;
+  line-height: 52.12px;
+  color:rgb(73, 154, 24);
+  margin-right: 142px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 559px;
+}
+
+.buttons-wrapper button {
+  width: 161px;
+  height: 50px;
+  border: 1px solid rgb(224, 103, 51);
+  border-radius: 5px;
+  font: 400 20px 'Inika', serif;
+  line-height: 26.06px;
+  color: rgb(224, 103, 51);
+  background-color: rgb(237, 242, 236);
+}
+
+.wrapper-card {
+  width: 1222px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  padding-bottom: 121px;
+  justify-content: space-between;
+  gap: 55px 0
+}
+
+.card {
+  width: 330px;
+  height: 450px;
+  border: 1px solid rgb(227, 225, 213);
+  border-radius: 20px;
+}
+
+.card img {
+  width: 329px;
+  height: 350px;
+}
+
+.card h5 {
+  font: 700 20px 'Inter', sans-serif;
+  line-height: 20px;
+  color: rgb(224, 103, 51);
+  text-align: center;
+  margin: 7px 0 15px;
+}
+
+.card p {
+  font: 400 16px 'Inter', sans-serif;
+  line-height: 20px;
+  color:rgb(113, 113, 113);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
