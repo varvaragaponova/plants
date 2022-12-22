@@ -226,3 +226,103 @@ h1 span {
   text-align: center;
   letter-spacing: 0.5px;
 }
+
+/*Стили для section "prices"*/
+
+.wrapper-prices {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1222px;
+}
+
+.type h2 {
+  font: 700 40px 'Inter', sans-serif;
+  line-height: 48.41px;
+  margin: 40px 0 60px;
+}
+
+.type-list {
+  width: 332px;
+  border: 0.5px solid rgb(227, 225, 213);
+  border-radius: 15px;
+  padding: 34px 0;
+}
+
+.type-list details {
+  width: 250px;
+  height: 50px;
+  border: 0.5px solid rgb(227, 225, 213);
+  border-radius: 20px;
+  background-color: rgb(237, 242, 236);
+  margin: auto;
+}
+
+.type-list :not(:first-child) {
+  margin-top: 32px;
+}
+
+details summary {
+  font: 700 20px 'Inter', sans-serif;
+  line-height: 20px;
+  list-style: none;
+}
+
+details p {
+  display: none;
+}
+
+.wrapper-arrow {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background-color: rgb(217, 217, 217);
+}
+
+.wrapper-arrow svg {
+  margin: 6px 5px;
+}
+
+summary {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.text h3 {
+  width: 452px;
+  margin: 40px 0 38px;
+  font: 700 40px 'Inter', sans-serif;
+  text-align: right;
+  line-height: 50px;
+  letter-spacing: 0.5px;
+}
+
+.text h3 span {
+  color:rgb(73, 154, 24);
+}
+
+.text button {
+  width: 162px;
+  padding: 12px 0;
+  margin-bottom: 39px;
+  font: 700 20px 'Inika', serif;
+  line-height: 26.06px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 103, 51);
+  border-radius: 5px;
+  color:rgb(224, 103, 51);
+}
+
+.text img {
+  width: 152px;
+  height: 174.99px;
+}
