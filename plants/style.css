@@ -312,7 +312,9 @@ details p {
   display: none;
 }
 
+
 .wrapper-arrow {
+  display: block;
   width: 16px;
   height: 16px;
   border-radius: 10px;
