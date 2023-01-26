@@ -226,12 +226,14 @@ h1 span {
   transition: background-color .5s, color .5s, font-weight .5s;
 }
 
-.buttons-wrapper button:hover {
+.buttons-wrapper button:hover,
+.buttons-wrapper .active {
   cursor: pointer;
   font-weight: 700;
   color: rgb(255, 255, 255);
   background-color: rgb(224, 103, 51);
 }
+
 .wrapper-card {
   display: flex;
   flex-flow: row wrap;
@@ -247,6 +249,10 @@ h1 span {
   height: 450px;
   border: 1px solid rgb(227, 225, 213);
   border-radius: 20px;
+}
+
+.card.blur {
+  filter: blur(2px);
 }
 
 .card .for-laptop {
