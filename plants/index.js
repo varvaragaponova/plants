@@ -56,3 +56,28 @@ const onServiceButtonClick = (event) => {
 buttonGarden.addEventListener('click', onServiceButtonClick);
 buttonLawn.addEventListener('click', onServiceButtonClick);
 buttonPlanting.addEventListener('click', onServiceButtonClick);
+
+const pricesList = document.querySelectorAll('.details');
+
+const onPriceClick = (event) => {
+    document.querySelectorAll('.details.open').forEach(item => {
+        if(item !== event.target.closest('.details')) {
+            item.classList.remove('open');
+        }
+    });
+    event.target.closest('.details').classList.toggle('open');
+}
+
+pricesList.forEach(price => price.addEventListener('click', onPriceClick, false));
+
+const buttonScroll = document.querySelectorAll('.button-order');
+const toScroll = document.getElementById('contacts');
+
+
+buttonScroll.forEach(button => button.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    document.getElementById('contacts').scrollIntoView({
+        behavior: 'smooth'
+    });
+}));
