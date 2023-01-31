@@ -564,6 +564,10 @@ label:hover {
   background-color: rgb(193, 230, 152);
 }
 
+label:active {
+  background-color: rgb(193, 230, 152);
+}
+
 .arrow {
   display: flex;
   justify-content: space-around;
@@ -576,7 +580,7 @@ label:hover {
 
 .city-list {
   display: none;
-  padding: 31px 35px;
+  padding: 27px 50px 31px 20px;
   background-color: rgb(220, 233, 217);
   list-style: none;
 }
@@ -598,6 +602,86 @@ label:hover {
   cursor: pointer;
   color: rgb(113, 113, 113);
   border-bottom: 1px solid rgb(113, 113, 113);
+}
+
+label.checked {
+  background-color: rgb(193, 230, 152);
+}
+
+.city-list.close {
+  display: none;
+}
+
+.city-container {
+  display: none;
+}
+
+.city-container.open {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  margin-top: 65px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  font: 400 16px 'Inter', sans-serif;
+  letter-spacing: 1.3px;
+  line-height: 40px;
+  background-color: rgb(237, 242, 236);
+}
+
+.city-container.open .about-city-inform {
+  width: 337px;
+  height: 165px;
+  margin: 17px 76px 32px 33px;
+}
+
+.city-container.open .text-info {
+  display: flex;
+  gap: 5px;
+}
+
+.city-container.open .city-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-container.open .city-information-details {
+  display: flex;
+  flex-direction: column;
+  color: rgb(113, 113, 113);
+}
+
+.city-container.open .call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 122px;
+  height: 26px;
+  margin: 23px auto 0;
+  border: 1px solid rgb(224, 103, 51);
+  border-radius: 5px;
+  font: 700 10px 'Inika', serif;
+  background-color: rgb(237, 242, 236);
+  color: rgb(113, 113, 113);
+}
+
+.city-container.open a.phone {
+  width: 100%;
+  height: 120%;
+  padding-top: 10px;
+  margin-top: -5px;
+  text-decoration: none;
+  color: rgb(113, 113, 113);
+}
+
+.city-container.open .call:hover {
+  background-color: rgba(224, 103, 51, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.city-container.open a.phone:hover {
+  color:rgb(255, 255, 255);
 }
 
 /*Стили для footer*/
@@ -1128,6 +1212,7 @@ footer a {
 
   .wrapper-city {
     display: flex;
+    flex-direction: column;
     order: 2;
   }
 
@@ -1190,7 +1275,7 @@ footer a {
 
   .city-list {
     display: none;
-    padding: 31px 35px;
+    padding: 27px 50px 31px 20px;
     background-color: rgb(220, 233, 217);
     list-style: none;
   }
@@ -1212,6 +1297,28 @@ footer a {
     cursor: pointer;
     color: rgb(113, 113, 113);
     border-bottom: 1px solid rgb(113, 113, 113);
+  }
+
+  label.checked {
+    background-color: rgb(193, 230, 152);
+  }
+
+  .city-container.open a.phone {
+    width: 100%;
+    height: 120%;
+    padding-top: 10px;
+    margin-top: -5px;
+    text-decoration: none;
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .call:hover {
+    background-color: rgba(224, 103, 51, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .city-container.open a.phone:hover {
+    color:rgb(255, 255, 255);
   }
 
 /*Стили для footer*/
@@ -1838,6 +1945,7 @@ transform: translateY(4px);
 
   .wrapper-city {
     display: flex;
+    flex-direction: column;
     order: 2;
   }
 
@@ -1924,6 +2032,47 @@ transform: translateY(4px);
     border-bottom: 1px solid rgb(113, 113, 113);
   }
 
+  .city-container.open {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 65px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font: 400 14px 'Inter', sans-serif;
+    letter-spacing: 1px;
+    line-height: 20px;
+    background-color: rgb(237, 242, 236);
+  }
+
+  .city-container.open .about-city-inform {
+    width: 235px;
+    height: 120px;
+    margin: 17px 3px 26px 33px;
+  }
+
+  .city-container.open a.phone {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    margin-top: -5px;
+    text-decoration: none;
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .call:hover {
+    background-color: rgba(224, 103, 51, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .city-container.open a.phone:hover {
+    color:rgb(255, 255, 255);
+  }
+
+  label.checked {
+    background-color: rgb(193, 230, 152);
+  }
   /*Стили для footer*/
   footer {
     display: flex;
@@ -2468,6 +2617,7 @@ transform: translateY(4px);
 
   .wrapper-city {
     display: flex;
+    flex-direction: column;
     order: 2;
   }
 
@@ -2530,7 +2680,7 @@ transform: translateY(4px);
 
   .city-list {
     display: none;
-    padding: 31px 35px;
+    padding: 27px 50px 31px 20px;
     background-color: rgb(220, 233, 217);
     list-style: none;
   }
@@ -2554,6 +2704,81 @@ transform: translateY(4px);
     border-bottom: 1px solid rgb(113, 113, 113);
   }
 
+  .city-container {
+    display: none;
+  }
+
+  .city-container.open {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 65px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font: 400 16px 'Inter', sans-serif;
+    letter-spacing: 1.3px;
+    line-height: 40px;
+    background-color: rgb(237, 242, 236);
+  }
+
+  .city-container.open .about-city-inform {
+    width: 337px;
+    height: 165px;
+    margin: 17px 76px 32px 33px;
+  }
+
+  .city-container.open .text-info {
+    display: flex;
+    gap: 5px;
+  }
+
+  .city-container.open .city-information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .city-container.open .city-information-details {
+    display: flex;
+    flex-direction: column;
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open a.phone {
+    width: 100%;
+    height: 120%;
+    padding-top: 10px;
+    margin-top: -5px;
+    text-decoration: none;
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .call:hover {
+    background-color: rgba(224, 103, 51, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .city-container.open a.phone:hover {
+    color:rgb(255, 255, 255);
+  }
+
+  label.checked {
+    background-color: rgb(193, 230, 152);
+  }
 /*Стили для footer*/
   footer {
     display: flex;
@@ -3098,6 +3323,7 @@ transform: translateY(4px);
 
   .wrapper-city {
     display: flex;
+    flex-direction: column;
     order: 2;
   }
 
@@ -3160,13 +3386,14 @@ transform: translateY(4px);
 
   .city-list {
     display: none;
-    padding: 31px 35px;
+    width: 320px;
+    padding: 27px 50px 31px 20px;
     background-color: rgb(220, 233, 217);
     list-style: none;
   }
 
   .city-list li {
-    width: 380px;
+    width: 260px;
     border-bottom: 1px solid rgb(217, 217, 217);
     font: 400 16px 'Inter', sans-serif;
     line-height: 40px;
@@ -3184,6 +3411,77 @@ transform: translateY(4px);
     border-bottom: 1px solid rgb(113, 113, 113);
   }
 
+  .city-container.open {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 65px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font: 400 14px 'Inter', sans-serif;
+    letter-spacing: 1px;
+    line-height: 20px;
+    background-color: rgb(237, 242, 236);
+  }
+
+  .city-container.open .about-city-inform {
+    width: 265px;
+    height: 120px;
+    margin: 18px 0 18px 22px;
+  }
+
+  .city-container.open .text-info {
+    display: flex;
+    gap: 5px;
+  }
+
+  .city-container.open .city-information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .city-container.open .city-information-details {
+    display: flex;
+    flex-direction: column;
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open a.phone {
+    width: 100%;
+    height: 120%;
+    padding-top: 10px;
+    margin-top: -5px;
+    text-decoration: none;
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .call:hover {
+    background-color: rgba(224, 103, 51, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .city-container.open a.phone:hover {
+    color:rgb(255, 255, 255);
+  }
+
+  label.checked {
+    background-color: rgb(193, 230, 152);
+  }
 /*Стили для footer*/
   footer {
     display: flex;
