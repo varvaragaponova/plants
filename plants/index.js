@@ -92,6 +92,11 @@ itemsCity.forEach((item, index) => item.addEventListener('click', function(event
     city.querySelector('span').textContent = event.target.textContent;
     city.classList.add('checked');
     document.getElementById('city').checked = false;
+    document.querySelector('.wrapper-contacts').classList.add('close');
+
+    if(window.matchMedia("(min-width: 381px)")) document.querySelector('.woman').style.marginTop = '14px';
+    if(window.matchMedia("(min-width: 768px)")) document.querySelector('.woman').style.marginTop = '0';
+
     document.querySelectorAll('.city-container').forEach((elem, i) => {
         if (index === i) elem.classList.add('open');
         else if(elem.classList.contains('open')) elem.classList.remove('open');

@@ -652,7 +652,7 @@ label.checked {
   color: rgb(113, 113, 113);
 }
 
-.city-container.open .call {
+.city-container.open .phone {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -661,27 +661,16 @@ label.checked {
   margin: 23px auto 0;
   border: 1px solid rgb(224, 103, 51);
   border-radius: 5px;
+  text-decoration: none;
   font: 700 10px 'Inika', serif;
   background-color: rgb(237, 242, 236);
   color: rgb(113, 113, 113);
 }
 
-.city-container.open a.phone {
-  width: 100%;
-  height: 120%;
-  padding-top: 10px;
-  margin-top: -5px;
-  text-decoration: none;
-  color: rgb(113, 113, 113);
-}
-
-.city-container.open .call:hover {
+.city-container.open .phone:hover {
+  color:rgb(255, 255, 255);
   background-color: rgba(224, 103, 51, 1);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.city-container.open a.phone:hover {
-  color:rgb(255, 255, 255);
 }
 
 /*Стили для footer*/
@@ -1303,22 +1292,25 @@ footer a {
     background-color: rgb(193, 230, 152);
   }
 
-  .city-container.open a.phone {
-    width: 100%;
-    height: 120%;
-    padding-top: 10px;
-    margin-top: -5px;
+  .city-container.open .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
     text-decoration: none;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
     color: rgb(113, 113, 113);
   }
 
-  .city-container.open .call:hover {
+  .city-container.open .phone:hover {
+    color:rgb(255, 255, 255);
     background-color: rgba(224, 103, 51, 1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  .city-container.open a.phone:hover {
-    color:rgb(255, 255, 255);
   }
 
 /*Стили для footer*/
@@ -1926,6 +1918,10 @@ transform: translateY(4px);
     margin: 0 auto;
   }
 
+  .wrapper-contacts.close img{
+    display: none;
+  }
+
   .contacts img {
     display: flex;
     order: 3;
@@ -2037,7 +2033,8 @@ transform: translateY(4px);
     flex-direction: column;
     text-align: left;
     width: 100%;
-    margin-top: 65px;
+    margin-top: 49px;
+    margin-bottom: 33px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 20px;
     font: 400 14px 'Inter', sans-serif;
@@ -2052,22 +2049,25 @@ transform: translateY(4px);
     margin: 17px 3px 26px 33px;
   }
 
-  .city-container.open a.phone {
-    width: 100%;
-    height: 120%;
-    padding-top: 10px;
-    margin-top: -5px;
+  .city-container.open .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
     text-decoration: none;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
     color: rgb(113, 113, 113);
   }
 
-  .city-container.open .call:hover {
+  .city-container.open .phone:hover {
+    color:rgb(255, 255, 255);
     background-color: rgba(224, 103, 51, 1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  .city-container.open a.phone:hover {
-    color:rgb(255, 255, 255);
   }
 
   label.checked {
@@ -2758,22 +2758,25 @@ transform: translateY(4px);
     color: rgb(113, 113, 113);
   }
 
-  .city-container.open a.phone {
-    width: 100%;
-    height: 120%;
-    padding-top: 10px;
-    margin-top: -5px;
+  .city-container.open .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
     text-decoration: none;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
     color: rgb(113, 113, 113);
   }
 
-  .city-container.open .call:hover {
+  .city-container.open .phone:hover {
+    color:rgb(255, 255, 255);
     background-color: rgba(224, 103, 51, 1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  .city-container.open a.phone:hover {
-    color:rgb(255, 255, 255);
   }
 
   label.checked {
@@ -3461,22 +3464,26 @@ transform: translateY(4px);
     color: rgb(113, 113, 113);
   }
 
-  .city-container.open a.phone {
-    width: 100%;
-    height: 120%;
-    padding-top: 10px;
-    margin-top: -5px;
+  .city-container.open .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
     text-decoration: none;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
     color: rgb(113, 113, 113);
   }
 
-  .city-container.open .call:hover {
+  .city-container.open .phone:hover {
+    color:rgb(255, 255, 255);
     background-color: rgba(224, 103, 51, 1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-
-  .city-container.open a.phone:hover {
-    color:rgb(255, 255, 255);
   }
 
   label.checked {
