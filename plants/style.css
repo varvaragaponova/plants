@@ -580,6 +580,7 @@ label:active {
 
 .city-list {
   display: none;
+  position: absolute;
   padding: 27px 50px 31px 20px;
   background-color: rgb(220, 233, 217);
   list-style: none;
@@ -606,6 +607,7 @@ label:active {
 
 label.checked {
   background-color: rgb(193, 230, 152);
+  z-index: 1;
 }
 
 .city-list.close {
