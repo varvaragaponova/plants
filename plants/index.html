@@ -69,44 +69,44 @@
                 <div class="project">
                     <h2>Service and our projects</h2>
                     <div class="buttons-wrapper">
-                        <button>Gardens</button>
-                        <button>Lawn</button>
-                        <button>Planting</button>
+                        <button class="garden-button" data-class="garden">Gardens</button>
+                        <button class="lawn-button" data-class="lawn">Lawn</button>
+                        <button class="planting-button" data-class="planting">Planting</button>
                     </div>
                 </div>
                 <div class="project-information">
                     <div class="wrapper-card">
-                        <div class="card">
+                        <div class="card garden">
                             <img class="for-laptop" src="./assets/img/garden.png" alt="garden">
                             <img class="for-tablet" src="./assets/img/garden768.png" alt="garden">
                             <h5>Garden care</h5>
                             <p>Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card planting">
                             <img class="for-laptop" src="./assets/img/lemon.png" alt="lemon">
                             <img class="for-tablet" src="./assets/img/lemon768.png" alt="lemon">
                             <h5>Planting</h5>
                             <p>Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card lawn">
                             <img class="for-laptop" src="./assets/img/lawn-care.png" alt="lawn-care">
                             <img class="for-tablet" src="./assets/img/lawn-care768.png" alt="lawn-care">
                             <h5>Lawn care</h5>
                             <p>Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card planting">
                             <img class="for-laptop" src="./assets/img/flowers.png" alt="flowers">
                             <img class="for-tablet" src="./assets/img/flowers768.png" alt="flowers">
                             <h5>Planting</h5>
                             <p>Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card garden">
                             <img class="for-laptop" src="./assets/img/garden-care.png" alt="garden-care">
                             <img class="for-tablet" src="./assets/img/garden-care768.png" alt="garden-care">
                             <h5>Garden care</h5>
                             <p>Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card planting">
                             <img class="for-laptop" src="./assets/img/planting.png" alt="planting">
                             <img class="for-tablet" src="./assets/img/planting768.png" alt="planting">
                             <h5>Planting</h5>
@@ -122,42 +122,55 @@
                 <div class="type">
                     <h2>Prices</h2>
                     <form class="type-list">
-                        <details>
-                            <summary>Basics
+                        <div class="details">
+                            <div class="wrapper-about-order">
+                                <p class="about-order">Basics</p>
                                 <span class="wrapper-arrow">
                                     <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.00003 3.00094L1.00003 1.00106" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
                                         <path d="M3 3.00073L5 1.00073" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
                                     </svg>
                                 </span>
-                            </summary>
-                            <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-                            <p><span>$15</span> / per hour</p>
-                        </details>
-                        <details>
-                            <summary>Standard
+                            </div>
+                            <div class="details-information">
+                                <p class="type-information">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <p class="price">
+                                    <span class="odd">$</span><span class="even">15</span> / per hour</p>
+                                <button class="button-order">Order</button>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="wrapper-about-order">
+                                <p class="about-order">Standard</p>
                                 <span class="wrapper-arrow">
                                     <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.00003 3.00094L1.00003 1.00106" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
                                         <path d="M3 3.00073L5 1.00073" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
                                     </svg>
                                 </span>
-                            </summary>
-                            <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-                            <p><span>$25</span> / per hour</p>
-                        </details>
-                        <details>
-                            <summary>Pro care
+                            </div>
+                            <div class="details-information">
+                                <p class="type-information">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <p class="price"><span class="odd">$</span><span class="even">25</span> / per hour</p>
+                                <button class="button-order">Order</button>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="wrapper-about-order">
+                                <p class="about-order">Pro care</p>
                                 <span class="wrapper-arrow">
                                     <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.00003 3.00094L1.00003 1.00106" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
                                         <path d="M3 3.00073L5 1.00073" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
                                     </svg>
                                 </span>
-                            </summary>
-                            <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-                            <p><span>$35</span> / per hour</p>
-                        </details>
+                            </div>
+                            <div class="details-information">
+                                <p class="type-information">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <p class="price"><span class="odd">$</span><span class="even">35</span> / per hour</p>
+                                <button class="button-order">Order</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="text">
@@ -170,7 +183,7 @@
 
         <section class="contacts" id="contacts">
             <div class="wrapper-contacts">
-                <img src="./assets/img/contact_woman1.png" alt="woman">
+                <img class="woman" src="./assets/img/contact_woman1.png" alt="woman">
                 <h2>Contact us</h2>
                 <div class="wrapper-city">
                     <input type="checkbox" id="city">
@@ -184,11 +197,79 @@
                         </span>
                     </label>
                     <ul class="city-list">
-                        <li>Canandaigua, NY</li>
-                        <li>New York City</li>
-                        <li>Yonkers, NY</li>
-                        <li>Sherrill, NY</li>
+                        <li class="city-list-item">Canandaigua, NY</li>
+                        <li class="city-list-item">New York City</li>
+                        <li class="city-list-item">Yonkers, NY</li>
+                        <li class="city-list-item">Sherrill, NY</li>
                     </ul>
+                    <div class="city-container">
+                        <div class="about-city-inform">
+                            <div class="text-info">
+                                <p class="city-information">
+                                    <span class="subtitle">City:</span>
+                                    <span class="subtitle">Phone:</span>
+                                    <span class="subtitle">Office address:</span>
+                                </p>
+                                <p class="city-information-details">
+                                    <span class="city-text">Canandaigua, NY</span>
+                                    <span class="city-text">+1 585 393 0001</span>
+                                    <span class="city-text">151 Charlotte Street</span>
+                                </p>
+                            </div>
+                            <a class="phone" href="tel:+15853930001">Call us</a>
+                        </div>
+                    </div>
+                    <div class="city-container">
+                        <div class="about-city-inform">
+                            <div class="text-info">
+                                <p class="city-information">
+                                    <span class="subtitle">City:</span>
+                                    <span class="subtitle">Phone:</span>
+                                    <span class="subtitle">Office address:</span>
+                                </p>
+                                <p class="city-information-details">
+                                    <span class="city-text">New York City</span>
+                                    <span class="city-text">+1 212 456 0002</span>
+                                    <span class="city-text">9 East 91st Street</span>
+                                </p>
+                            </div>
+                            <a class="phone" href="tel:+12124560002">Call us</a>
+                        </div>
+                    </div>
+                    <div class="city-container">
+                        <div class="about-city-inform">
+                            <div class="text-info">
+                                <p class="city-information">
+                                    <span class="subtitle">City:</span>
+                                    <span class="subtitle">Phone:</span>
+                                    <span class="subtitle">Office address:</span>
+                                </p>
+                                <p class="city-information-details">
+                                    <span class="city-text">Yonkers, NY</span>
+                                    <span class="city-text">+1 914 678 0003</span>
+                                    <span class="city-text">511 Warburton Ave</span>
+                                </p>
+                            </div>
+                            <a class="phone" href="tel:+19146780003">Call us</a>
+                        </div>
+                    </div>
+                    <div class="city-container">
+                        <div class="about-city-inform">
+                            <div class="text-info">
+                                <p class="city-information">
+                                    <span class="subtitle">City:</span>
+                                    <span class="subtitle">Phone:</span>
+                                    <span class="subtitle">Office address:</span>
+                                </p>
+                                <p class="city-information-details">
+                                    <span class="city-text">Sherrill, NY</span>
+                                    <span class="city-text">+1 315 908 0004</span>
+                                    <span class="city-text">14 WEST Noyes BLVD</span>
+                                </p>
+                            </div>
+                            <a class="phone" href="tel:+13159080004">Call us</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

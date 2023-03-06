@@ -226,12 +226,14 @@ h1 span {
   transition: background-color .5s, color .5s, font-weight .5s;
 }
 
-.buttons-wrapper button:hover {
+.buttons-wrapper button:hover,
+.buttons-wrapper .active {
   cursor: pointer;
   font-weight: 700;
   color: rgb(255, 255, 255);
   background-color: rgb(224, 103, 51);
 }
+
 .wrapper-card {
   display: flex;
   flex-flow: row wrap;
@@ -247,6 +249,11 @@ h1 span {
   height: 450px;
   border: 1px solid rgb(227, 225, 213);
   border-radius: 20px;
+}
+
+.card.blur {
+  filter: blur(2px);
+  transition: all 5s;
 }
 
 .card .for-laptop {
@@ -303,34 +310,116 @@ h1 span {
   border-radius: 15px;
 }
 
-.type-list details {
+.type-list .details {
   width: 250px;
   height: 50px;
   margin: auto;
   border: 0.5px solid rgb(227, 225, 213);
   border-radius: 20px;
   background-color: rgb(237, 242, 236);
+  overflow: hidden;
+  transition: height .5s;
 }
 
-.type-list details:hover {
+.details-information {
+  display: none;
+}
+
+.type-list .details:hover {
   cursor: pointer;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.type-list :not(:first-child) {
+.type-list > :not(div:first-of-type) {
   margin-top: 32px;
 }
 
-details summary {
+.details .about-order {
   font: 700 20px 'Inter', sans-serif;
   line-height: 20px;
   list-style: none;
 }
 
-details p {
-  display: none;
+.wrapper-about-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 16px;
 }
 
+/*Open*/
+
+.details.open {
+  width: 75%;
+  height: 154px;
+  background-color: rgb(214, 231, 210);
+  transition: height .7s;
+}
+
+.details.open .wrapper-arrow {
+  background-color: rgb(174,161,161);
+}
+
+.details.open .wrapper-arrow svg{
+  transform: rotate(180deg);
+}
+
+.details.open .wrapper-arrow svg path {
+  fill: white;
+  stroke: white;
+}
+
+.details.open .details-information {
+  display: block;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.details.open .type-information {
+  margin: 12px 0 6px;
+  padding-top: 6px;
+  border-top: 0.5px solid rgb(174, 161, 161);
+  font: 300 10px 'Inter', sans-serif;
+  line-height: 10px;
+  color: rgb(113, 113, 113);
+}
+
+.details.open .price {
+  margin: 0 0 8px;
+  font: 400 12px 'Inter', sans-serif;
+  line-height: 20px;
+  color:rgb(0, 0, 0);
+}
+
+.details.open .odd {
+  font: 700 12px 'Inter', sans-serif;
+  color:rgb(224, 103, 51);
+  line-height: 20px;
+}
+
+.details.open .even {
+  font: 700 16px 'Inter', sans-serif;
+  color:rgb(224, 103, 51);
+  line-height: 20px;
+}
+
+.details.open .button-order {
+  width: 86px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 12px;
+  font: 700 14px 'Inter', sans-serif;
+  line-height: 20px;
+  color: rgb(113, 113, 113);
+  background-color: rgb(255, 255, 255);
+}
+
+.details.open .button-order:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
 
 .wrapper-arrow {
   display: block;
@@ -344,7 +433,7 @@ details p {
   margin: 6px 5px;
 }
 
-summary {
+.about-order {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -475,6 +564,10 @@ label:hover {
   background-color: rgb(193, 230, 152);
 }
 
+label:active {
+  background-color: rgb(193, 230, 152);
+}
+
 .arrow {
   display: flex;
   justify-content: space-around;
@@ -487,7 +580,8 @@ label:hover {
 
 .city-list {
   display: none;
-  padding: 31px 35px;
+  position: absolute;
+  padding: 27px 50px 31px 20px;
   background-color: rgb(220, 233, 217);
   list-style: none;
 }
@@ -509,6 +603,76 @@ label:hover {
   cursor: pointer;
   color: rgb(113, 113, 113);
   border-bottom: 1px solid rgb(113, 113, 113);
+}
+
+label.checked {
+  background-color: rgb(193, 230, 152);
+  z-index: 1;
+}
+
+.city-list.close {
+  display: none;
+}
+
+.city-container {
+  display: none;
+}
+
+.city-container.open {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  margin-top: 65px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  font: 400 16px 'Inter', sans-serif;
+  letter-spacing: 1.3px;
+  line-height: 40px;
+  background-color: rgb(237, 242, 236);
+}
+
+.city-container.open .about-city-inform {
+  width: 337px;
+  height: 165px;
+  margin: 17px 76px 32px 33px;
+}
+
+.city-container.open .text-info {
+  display: flex;
+  gap: 5px;
+}
+
+.city-container.open .city-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-container.open .city-information-details {
+  display: flex;
+  flex-direction: column;
+  color: rgb(113, 113, 113);
+}
+
+.city-container.open .phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 122px;
+  height: 26px;
+  margin: 23px auto 0;
+  border: 1px solid rgb(224, 103, 51);
+  border-radius: 5px;
+  text-decoration: none;
+  font: 700 10px 'Inika', serif;
+  background-color: rgb(237, 242, 236);
+  color: rgb(113, 113, 113);
+}
+
+.city-container.open .phone:hover {
+  color:rgb(255, 255, 255);
+  background-color: rgba(224, 103, 51, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*Стили для footer*/
@@ -852,7 +1016,7 @@ footer a {
     border-radius: 20px;
   }
 
-  .type-list details {
+  .type-list .details {
     width: 250px;
     height: 50px;
     margin: auto;
@@ -861,25 +1025,77 @@ footer a {
     background-color: rgb(237, 242, 236);
   }
 
-  .type-list details:hover {
+  /*Open*/
+  .details.open {
+    width: 75%;
+    height: 154px;
+    background-color: rgb(214, 231, 210);
+    transition: height .7s;
+  }
+
+  .details.open .wrapper-arrow {
+    background-color: rgb(174,161,161);
+  }
+
+  .details.open .wrapper-arrow svg{
+    transform: rotate(180deg);
+  }
+
+  .details.open .wrapper-arrow svg path {
+    fill: white;
+    stroke: white;
+  }
+
+  .details.open .details-information {
+    display: block;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .details.open .type-information {
+    margin: 12px 0 6px;
+    padding-top: 6px;
+    border-top: 0.5px solid rgb(174, 161, 161);
+    font: 300 10px 'Inter', sans-serif;
+    line-height: 10px;
+    color: rgb(113, 113, 113);
+  }
+
+  .details.open .price {
+    margin: 0 0 8px;
+    font: 400 12px 'Inter', sans-serif;
+    line-height: 20px;
+    color:rgb(0, 0, 0);
+  }
+
+  .details.open .odd {
+    font: 700 12px 'Inter', sans-serif;
+    color:rgb(224, 103, 51);
+    line-height: 20px;
+  }
+
+  .details.open .even {
+    font: 700 16px 'Inter', sans-serif;
+    color:rgb(224, 103, 51);
+    line-height: 20px;
+  }
+
+  .details.open .button-order {
+    width: 86px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 12px;
+    font: 700 14px 'Inter', sans-serif;
+    line-height: 20px;
+    color: rgb(113, 113, 113);
+    background-color: rgb(255, 255, 255);
+  }
+
+  .type-list .details:hover {
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-
-  .type-list :not(:first-child) {
-    margin-top: 32px;
-  }
-
-  details summary {
-    font: 700 20px 'Inter', sans-serif;
-    line-height: 20px;
-    list-style: none;
-  }
-
-  details p {
-    display: none;
-  }
-
 
   .wrapper-arrow {
     display: block;
@@ -891,13 +1107,6 @@ footer a {
 
   .wrapper-arrow svg {
     margin: 6px 5px;
-  }
-
-  summary {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
   }
 
   .text {
@@ -917,6 +1126,14 @@ footer a {
 
   .text h3 span {
     color:rgb(73, 154, 24);
+  }
+
+  .wrapper-about-order {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 14px;
   }
 
   .text button {
@@ -986,6 +1203,7 @@ footer a {
 
   .wrapper-city {
     display: flex;
+    flex-direction: column;
     order: 2;
   }
 
@@ -1048,7 +1266,7 @@ footer a {
 
   .city-list {
     display: none;
-    padding: 31px 35px;
+    padding: 27px 50px 31px 20px;
     background-color: rgb(220, 233, 217);
     list-style: none;
   }
@@ -1070,6 +1288,31 @@ footer a {
     cursor: pointer;
     color: rgb(113, 113, 113);
     border-bottom: 1px solid rgb(113, 113, 113);
+  }
+
+  label.checked {
+    background-color: rgb(193, 230, 152);
+  }
+
+  .city-container.open .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
+    text-decoration: none;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .phone:hover {
+    color:rgb(255, 255, 255);
+    background-color: rgba(224, 103, 51, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
 /*Стили для footer*/
@@ -1138,6 +1381,11 @@ footer a {
 
   header.open .list-nav {
     transform: translateX(-100%);
+    transition: transform .5s;
+  }
+
+  header .list-nav {
+    transition: transform .5s;
   }
 
   .header-wrapper {
@@ -1491,7 +1739,7 @@ footer a {
   border-radius: 20px;
 }
 
-.type-list details {
+.type-list .details {
   width: 180px;
   height: 49.72px;
   margin: 28px auto 0;
@@ -1500,24 +1748,96 @@ footer a {
   background-color: rgb(237, 242, 236);
 }
 
-.type-list :not(:first-child) {
-  margin-top: 14px;
+.wrapper-about-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 110px;
+  margin: 16px 30px 0;
 }
 
-.type-list details:hover {
-  cursor: pointer;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+.type-list > :not(div:first-of-type) {
+  margin-top: 13.92px;
 }
 
-details summary {
-  margin: 1px 19px 0 10px;
+.details .about-order {
   font: 700 15px 'Inter', sans-serif;
   line-height: 20px;
   list-style: none;
 }
 
-details p {
-  display: none;
+.type-list .details:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/*Open*/
+
+.details.open {
+  width: 75%;
+  height: 164px;
+  background-color: rgb(214, 231, 210);
+  transition: height .7s;
+}
+
+.details.open .wrapper-arrow {
+  background-color: rgb(174,161,161);
+}
+
+.details.open .wrapper-arrow svg{
+  transform: rotate(180deg);
+}
+
+.details.open .wrapper-arrow svg path {
+  fill: white;
+  stroke: white;
+}
+
+.details.open .details-information {
+  display: block;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.details.open .type-information {
+  margin: 12px 0 6px;
+  padding-top: 6px;
+  border-top: 0.5px solid rgb(174, 161, 161);
+  font: 300 10px 'Inter', sans-serif;
+  line-height: 10px;
+  color: rgb(113, 113, 113);
+}
+
+.details.open .price {
+  margin: 0 0 8px;
+  font: 400 12px 'Inter', sans-serif;
+  line-height: 20px;
+  color:rgb(0, 0, 0);
+}
+
+.details.open .odd {
+  font: 700 12px 'Inter', sans-serif;
+  color:rgb(224, 103, 51);
+  line-height: 20px;
+}
+
+.details.open .even {
+  font: 700 16px 'Inter', sans-serif;
+  color:rgb(224, 103, 51);
+  line-height: 20px;
+}
+
+.details.open .button-order {
+  width: 86px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 12px;
+  font: 700 14px 'Inter', sans-serif;
+  line-height: 20px;
+  color: rgb(113, 113, 113);
+  background-color: rgb(255, 255, 255);
 }
 
 .wrapper-arrow {
@@ -1530,13 +1850,6 @@ details p {
 
 .wrapper-arrow svg {
   margin: 6px 5px;
-}
-
-summary {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
 }
 
 .text {
@@ -1607,6 +1920,10 @@ transform: translateY(4px);
     margin: 0 auto;
   }
 
+  .wrapper-contacts.close img{
+    display: none;
+  }
+
   .contacts img {
     display: flex;
     order: 3;
@@ -1626,6 +1943,7 @@ transform: translateY(4px);
 
   .wrapper-city {
     display: flex;
+    flex-direction: column;
     order: 2;
   }
 
@@ -1712,6 +2030,51 @@ transform: translateY(4px);
     border-bottom: 1px solid rgb(113, 113, 113);
   }
 
+  .city-container.open {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 49px;
+    margin-bottom: 33px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font: 400 14px 'Inter', sans-serif;
+    letter-spacing: 1px;
+    line-height: 20px;
+    background-color: rgb(237, 242, 236);
+  }
+
+  .city-container.open .about-city-inform {
+    width: 235px;
+    height: 120px;
+    margin: 17px 3px 26px 33px;
+  }
+
+  .city-container.open .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
+    text-decoration: none;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .phone:hover {
+    color:rgb(255, 255, 255);
+    background-color: rgba(224, 103, 51, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  label.checked {
+    background-color: rgb(193, 230, 152);
+  }
   /*Стили для footer*/
   footer {
     display: flex;
@@ -2058,7 +2421,7 @@ transform: translateY(4px);
     border-radius: 20px;
   }
 
-  .type-list details {
+  .type-list .details {
     width: 250px;
     height: 50px;
     margin: auto;
@@ -2067,25 +2430,96 @@ transform: translateY(4px);
     background-color: rgb(237, 242, 236);
   }
 
-  .type-list details:hover {
+  /*Open*/
+
+  .details.open {
+    width: 75%;
+    height: 154px;
+    background-color: rgb(214, 231, 210);
+    transition: height .7s;
+  }
+
+  .details.open .wrapper-arrow {
+    background-color: rgb(174,161,161);
+  }
+
+  .details.open .wrapper-arrow svg{
+    transform: rotate(180deg);
+  }
+
+  .details.open .wrapper-arrow svg path {
+    fill: white;
+    stroke: white;
+  }
+
+  .details.open .details-information {
+    display: block;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .details.open .type-information {
+    margin: 12px 0 6px;
+    padding-top: 6px;
+    border-top: 0.5px solid rgb(174, 161, 161);
+    font: 300 10px 'Inter', sans-serif;
+    line-height: 10px;
+    color: rgb(113, 113, 113);
+  }
+
+  .details.open .price {
+    margin: 0 0 8px;
+    font: 400 12px 'Inter', sans-serif;
+    line-height: 20px;
+    color:rgb(0, 0, 0);
+  }
+
+  .details.open .odd {
+    font: 700 12px 'Inter', sans-serif;
+    color:rgb(224, 103, 51);
+    line-height: 20px;
+  }
+
+  .details.open .even {
+    font: 700 16px 'Inter', sans-serif;
+    color:rgb(224, 103, 51);
+    line-height: 20px;
+  }
+
+  .details.open .button-order {
+    width: 86px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 12px;
+    font: 700 14px 'Inter', sans-serif;
+    line-height: 20px;
+    color: rgb(113, 113, 113);
+    background-color: rgb(255, 255, 255);
+  }
+
+  .type-list .details:hover {
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
-  .type-list :not(:first-child) {
-    margin-top: 32px;
+  .wrapper-about-order {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 16px;
   }
 
-  details summary {
-    font: 700 20px 'Inter', sans-serif;
+  .type-list > :not(div:first-of-type) {
+    margin-top: 13.92px;
+  }
+
+  .details .about-order {
+    font: 700 15px 'Inter', sans-serif;
     line-height: 20px;
     list-style: none;
   }
-
-  details p {
-    display: none;
-  }
-
 
   .wrapper-arrow {
     display: block;
@@ -2097,13 +2531,6 @@ transform: translateY(4px);
 
   .wrapper-arrow svg {
     margin: 6px 5px;
-  }
-
-  summary {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
   }
 
   .text {
@@ -2192,6 +2619,7 @@ transform: translateY(4px);
 
   .wrapper-city {
     display: flex;
+    flex-direction: column;
     order: 2;
   }
 
@@ -2254,7 +2682,7 @@ transform: translateY(4px);
 
   .city-list {
     display: none;
-    padding: 31px 35px;
+    padding: 27px 50px 31px 20px;
     background-color: rgb(220, 233, 217);
     list-style: none;
   }
@@ -2278,6 +2706,84 @@ transform: translateY(4px);
     border-bottom: 1px solid rgb(113, 113, 113);
   }
 
+  .city-container {
+    display: none;
+  }
+
+  .city-container.open {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 65px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font: 400 16px 'Inter', sans-serif;
+    letter-spacing: 1.3px;
+    line-height: 40px;
+    background-color: rgb(237, 242, 236);
+  }
+
+  .city-container.open .about-city-inform {
+    width: 337px;
+    height: 165px;
+    margin: 17px 76px 32px 33px;
+  }
+
+  .city-container.open .text-info {
+    display: flex;
+    gap: 5px;
+  }
+
+  .city-container.open .city-information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .city-container.open .city-information-details {
+    display: flex;
+    flex-direction: column;
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
+    text-decoration: none;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .phone:hover {
+    color:rgb(255, 255, 255);
+    background-color: rgba(224, 103, 51, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  label.checked {
+    background-color: rgb(193, 230, 152);
+  }
 /*Стили для footer*/
   footer {
     display: flex;
@@ -2625,7 +3131,7 @@ transform: translateY(4px);
     border-radius: 20px;
   }
 
-  .type-list details {
+  .type-list .details {
     width: 80%;
     height: 50px;
     margin: auto;
@@ -2634,25 +3140,77 @@ transform: translateY(4px);
     background-color: rgb(237, 242, 236);
   }
 
-  .type-list details:hover {
+  .type-list .details:hover {
     cursor: pointer;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
-  .type-list :not(:first-child) {
-    margin-top: 32px;
+  /*Open*/
+  .details.open {
+    width: 75%;
+    height: 160px;
+    background-color: rgb(214, 231, 210);
+    transition: height .7s;
   }
 
-  details summary {
-    font: 700 20px 'Inter', sans-serif;
+  .details.open .wrapper-arrow {
+    background-color: rgb(174,161,161);
+  }
+
+  .details.open .wrapper-arrow svg{
+    transform: rotate(180deg);
+  }
+
+  .details.open .wrapper-arrow svg path {
+    fill: white;
+    stroke: white;
+  }
+
+  .details.open .details-information {
+    display: block;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .details.open .type-information {
+    margin: 12px 0 6px;
+    padding-top: 6px;
+    border-top: 0.5px solid rgb(174, 161, 161);
+    font: 300 10px 'Inter', sans-serif;
+    line-height: 10px;
+    color: rgb(113, 113, 113);
+  }
+
+  .details.open .price {
+    margin: 0 0 8px;
+    font: 400 12px 'Inter', sans-serif;
     line-height: 20px;
-    list-style: none;
+    color:rgb(0, 0, 0);
   }
 
-  details p {
-    display: none;
+  .details.open .odd {
+    font: 700 12px 'Inter', sans-serif;
+    color:rgb(224, 103, 51);
+    line-height: 20px;
   }
 
+  .details.open .even {
+    font: 700 16px 'Inter', sans-serif;
+    color:rgb(224, 103, 51);
+    line-height: 20px;
+  }
+
+  .details.open .button-order {
+    width: 86px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 12px;
+    font: 700 14px 'Inter', sans-serif;
+    line-height: 20px;
+    color: rgb(113, 113, 113);
+    background-color: rgb(255, 255, 255);
+  }
 
   .wrapper-arrow {
     display: block;
@@ -2666,11 +3224,22 @@ transform: translateY(4px);
     margin: 6px 5px;
   }
 
-  summary {
+  .wrapper-about-order {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    height: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 16px;
+  }
+
+  .type-list > :not(div:first-of-type) {
+    margin-top: 13.92px;
+  }
+
+  .details .about-order {
+    font: 700 15px 'Inter', sans-serif;
+    line-height: 20px;
+    list-style: none;
   }
 
   .text {
@@ -2759,6 +3328,7 @@ transform: translateY(4px);
 
   .wrapper-city {
     display: flex;
+    flex-direction: column;
     order: 2;
   }
 
@@ -2821,13 +3391,14 @@ transform: translateY(4px);
 
   .city-list {
     display: none;
-    padding: 31px 35px;
+    width: 320px;
+    padding: 27px 50px 31px 20px;
     background-color: rgb(220, 233, 217);
     list-style: none;
   }
 
   .city-list li {
-    width: 380px;
+    width: 260px;
     border-bottom: 1px solid rgb(217, 217, 217);
     font: 400 16px 'Inter', sans-serif;
     line-height: 40px;
@@ -2845,6 +3416,81 @@ transform: translateY(4px);
     border-bottom: 1px solid rgb(113, 113, 113);
   }
 
+  .city-container.open {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 65px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    font: 400 14px 'Inter', sans-serif;
+    letter-spacing: 1px;
+    line-height: 20px;
+    background-color: rgb(237, 242, 236);
+  }
+
+  .city-container.open .about-city-inform {
+    width: 265px;
+    height: 120px;
+    margin: 18px 0 18px 22px;
+  }
+
+  .city-container.open .text-info {
+    display: flex;
+    gap: 5px;
+  }
+
+  .city-container.open .city-information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .city-container.open .city-information-details {
+    display: flex;
+    flex-direction: column;
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 26px;
+    margin: 23px auto 0;
+    border: 1px solid rgb(224, 103, 51);
+    border-radius: 5px;
+    text-decoration: none;
+    font: 700 10px 'Inika', serif;
+    background-color: rgb(237, 242, 236);
+    color: rgb(113, 113, 113);
+  }
+
+  .city-container.open .phone:hover {
+    color:rgb(255, 255, 255);
+    background-color: rgba(224, 103, 51, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  }
+
+  label.checked {
+    background-color: rgb(193, 230, 152);
+  }
 /*Стили для footer*/
   footer {
     display: flex;
@@ -2894,4 +3540,3 @@ transform: translateY(4px);
   .school a {
     letter-spacing: 0.4px;
   }
-}
