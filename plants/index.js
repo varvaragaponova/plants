@@ -103,3 +103,5 @@ itemsCity.forEach((item, index) => item.addEventListener('click', function(event
     })
 }))
 
+//The end
+
